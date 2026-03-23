@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Map & Foreach</title>
+</head>
+<body>
+    <script>
+        //Task 1
+        console.log("Task 1");
+        function doubleNumber(arr){
+            return arr.map((elem)=>{return elem*2});
+        }
+        console.log(doubleNumber([1,2,3]));
+
+        //Task 2
+        console.log("Task 2");
+        function numbersToStrings(arr){
+            return arr.map((elem)=>{return elem.toString()});
+        }
+        console.log(numbersToStrings([1,2,3]));
+
+
+        //Task 3
+        console.log("Task 3");
+        function upperCaseNames(arr){
+            return arr.map((elem)=>{return elem.toUpperCase()});
+        }
+        console.log(upperCaseNames(["ali","sara"]));
+
+
+        //Task 4
+        console.log("Task 4");
+        function addFive(arr){
+            return arr.map((elem)=>{return elem+5});
+        }
+        console.log(addFive([10,20,30]));
+
+
+        //Task 5
+        console.log("Task 5");
+        function getNames(arr){
+            return arr.map((elem)=>{return elem.name});
+        }
+        console.log(getNames([{name:"Ali",age:20},
+        {name:"Sara",age:25}]));
+
+
+        //Task 6
+        console.log("Task 6");
+        function wordLengths(arr){
+            return arr.map((elem)=>{return elem.length});
+        }
+        console.log(wordLengths(["apple","dog"]));
+
+
+        //Task 7
+        console.log("Task 7");
+        function valTimesIndex(arr){
+            return arr.map((elem , index)=>{return elem*index});
+        }
+        console.log(valTimesIndex([2,3,4]));
+
+
+        //Task 8
+        console.log("Task 8");
+        function makeUsernames(arr){
+            return arr.map((elem)=>{return `@${elem.username}`});
+        }
+        console.log(makeUsernames([{username:"ahmad"},
+        {username:"sara"}]));
+
+        
+        //Task 9
+        console.log("Task 9");
+        function squareNumbers(arr){
+            return arr.map((elem)=>{return Math.pow(elem,2)});
+        }
+        console.log(squareNumbers([2,3,4]));
+
+        //Task 10
+        console.log("Task 10");
+        function firstLetters(arr){
+            return arr.map((elem)=>{return elem[0]});
+        }
+        console.log(firstLetters(["Ali","Sara"]));
+
+
+        //Task 11
+        console.log("Task 11");
+        function sumNumbers(arr){
+            let sum = 0;
+            arr.forEach(element => {
+                sum += element;
+            });
+            return sum;
+        }
+        console.log(sumNumbers([10,20,30]));
+
+
+        //Task 12
+        console.log("Task 12");
+        function countEven(arr){
+            let count = 0;
+            arr.forEach(element => {
+                if(element%2 ==0)
+                    count++;
+            });
+            return count;
+        }
+        console.log(countEven([1,2,3,4]));
+
+        //Task 13
+        console.log("Task 13");
+        function timesTen(arr){
+            return arr.map((elem)=>{return elem*10});
+        }
+        console.log(timesTen([1,2,3]));
+
+
+        //Task 14
+        console.log("Task 14");
+        function addAdult(arr){
+            return arr.map((elem)=>{
+                if (elem.age >15)
+                    elem.adult = true;
+                else 
+                    elem.adult = false;
+                return elem});
+        }
+        console.log(addAdult([{name:"Ali",age:20}, 
+        {name:"Sara",age:15}]));
+
+
+        //Task 15
+        console.log("Task 15");
+        function addTax(arr){
+            return arr.map((elem)=>{return elem+10});
+        }
+        console.log(addTax([100,200]));
+
+
+        //Task 16
+        console.log("Task 16");
+        function countBig(arr){
+            let count =0;
+            arr.forEach((elem)=>{
+                if (elem > 50)
+                    count++;
+            })
+            return count;
+        }
+        console.log(countBig([20,60,80]));
+
+
+        //Task 17
+        console.log("Task 17");
+        function countBig(arr){
+            return arr.map((elem)=>{return `Number: ${elem}`})
+        }
+        console.log(countBig([5,10]));
+
+        //Task 18
+        console.log("Task 18");
+        function productNames(arr){
+            return arr.map((elem)=>{return elem.product})
+        }
+        console.log(productNames([{product:"Laptop",price:1000},
+        {product:"Phone",price:500}]));
+
+
+
+        //Task 19
+        console.log("Task 19");
+        function addIndex(arr){
+            return arr.map((elem , index)=>{return elem+index})
+        }
+        console.log(addIndex([5,5,5]));
+
+        //Task 20
+        console.log("Task 20");
+        function isEvenArray(arr){
+            return arr.map((elem)=>{return elem%2==0?true:false})
+        }
+        console.log(isEvenArray([1,2,3,4,9,9]));
+    </script>
+</body>
+</html>
